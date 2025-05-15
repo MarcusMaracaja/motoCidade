@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Test Drive - Moto Cidade</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container my-5">
+    <h1 class="mb-4">Detalhes da Moto e Agendamento</h1>
+
+    <!-- Detalhes da Moto -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <img src="https://via.placeholder.com/500x300" class="img-fluid" alt="Imagem da Moto">
+        </div>
+        <div class="col-md-6">
+            <h2 id="nomeMoto">Moto Selecionada</h2>
+            <p><strong>Ano:</strong> <span id="anoMoto">2022</span></p>
+            <p><strong>Preço:</strong> <span id="precoMoto">R$ 18.900,00</span></p>
+            <p><strong>Descrição Técnica:</strong> Motor 300cc, freios ABS, partida elétrica, painel digital.</p>
+        </div>
+    </div>
+
+    <!-- Formulário de Agendamento -->
+    <h2>Agende um Test Drive</h2>
+    <form>
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="telefone" required>
+        </div>
+        <div class="mb-3">
+            <label for="data" class="form-label">Data desejada</label>
+            <input type="date" class="form-control" id="data" required>
+        </div>
+        <button type="submit" class="btn btn-success">Enviar Agendamento</button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
