@@ -40,16 +40,16 @@ motoCidade/
 
 | Nome                           | Função                 |
 |--------------------------------|------------------------|
-| Marcus Vinícius Maracajá Pires| Desenvolvedor Front-end |
+| Marcus Vinícius Maracajá Pires | Desenvolvedor Front-end |
 
 ## 📅 Cronograma
 
 | Data       | Entrega                                     |
 |------------|---------------------------------------------|
-| 08/05/2024 | Definição do projeto e repositório          |
-| 15/05/2024 | Checkpoint do projeto                       |
-| 22/05/2024 | Entrega parcial do projeto                  |
-| 29/05/2024 | Apresentação e entrega final                |
+| 08/05/2025 | Definição do projeto e repositório          |
+| 15/05/2025 | Checkpoint do projeto                       |
+| 22/05/2025 | Entrega parcial do projeto                  |
+| 29/05/2025 | Apresentação e entrega final                |
 
 ## 📎 Link do Repositório
 
