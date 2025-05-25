@@ -6,40 +6,51 @@
 
 ## 📌 Descrição Geral
 
-O projeto **Moto Cidade** é um sistema web desenvolvido com o objetivo de simular o site de uma **concessionária de motos usadas**, com páginas informativas, vitrine de motos, formulário de contato e agendamento de test drives. Foi criado como parte da disciplina de Aplicações para Internet, utilizando tecnologias como **HTML5, CSS3 e Bootstrap**.
+O projeto **Moto Cidade** é um sistema web desenvolvido com o objetivo de simular o site de uma **concessionária de motos usadas**, com páginas informativas, vitrine de motos, formulário de contato, agendamento de test drives e área de envio de currículos. Foi criado como parte da disciplina de Aplicações para Internet, utilizando tecnologias como **HTML5, CSS3, Bootstrap** e manipulação de dados via **JSON**.
 
 ## 🚀 Funcionalidades
 
-- Página inicial com apresentação da empresa
-- Página “Sobre” com informações institucionais
-- Página de “Estoque” com galeria de motos disponíveis
-- Página de detalhes da moto com descrição técnica
-- Formulário de agendamento de test drive
-- Página de contato com formulário
+- Página inicial com apresentação da empresa e 3 motos em destaque aleatórias
+- Endereços de 3 lojas (João Pessoa - Centro e Bancários, Campina Grande - Centro)
+- Página de Estoque com exibição dinâmica de dezenas de motos a partir de `motos.json`
+- Destaque da loja de origem de cada moto
+- Página de Detalhes + Agendamento de Test Drive
+  - Preenchimento dinâmico da moto selecionada
+  - Validação de campos obrigatórios
+  - Mensagem de confirmação e redirecionamento
+- Página de Contato com formulário
+- Página “Trabalhe Conosco”
+  - Lista de vagas por loja
+  - Formulário com envio de currículo (PDF)
+  - Mensagem de sucesso e redirecionamento
 
 ## 🎨 Identidade Visual
 
-O sistema utiliza um layout limpo e responsivo com o framework Bootstrap, acompanhado de uma identidade visual personalizada com logomarca, cores contrastantes (vermelho, preto e branco) e uma estrutura de navegação intuitiva.
+Layout limpo e responsivo com Bootstrap 5, logomarca própria, cores institucionais (vermelho, preto e branco), e organização visual intuitiva. A navegação é feita por uma **navbar comum a todas as páginas**, carregada dinamicamente.
 
 ## 🧩 Estrutura do Projeto
 
 ```text
 motoCidade/
-├── index.html              # Página inicial
-├── estoque.html            # Galeria de motos
-├── agendamento.html        # Detalhes da moto e formulário de agendamento
+├── MotoCidade.html         # Página principal
+├── estoque.html            # Galeria de motos (dinâmico)
+├── agendamento.html        # Detalhes da moto e agendamento
+├── trabalhe-conosco.html   # Lista de vagas e envio de currículo
+├── navbar.html             # Menu compartilhado via JavaScript
+├── motos.json              # Base de dados simulada das motos
 ├── img/
-│   ├── logo.png            # Logomarca da Moto Cidade
-│   ├── xre300.jpg          # Imagem ilustrativa
-│   ├── fazer250.jpg        # Imagem ilustrativa
-│   └── cg160.jpg           # Imagem ilustrativa
+│   ├── logo.png
+│   ├── xre300.png
+│   ├── fazer250.png
+│   ├── cg160.png
+│   └── moto4.png ... moto20.png
 └── README.md               # Documento atual
 ```
 
 ## 👨‍💻 Equipe de Desenvolvimento
 
-| Nome                           | Função                 |
-|--------------------------------|------------------------|
+| Nome                            | Função                 |
+|---------------------------------|------------------------|
 | Marcus Vinícius Maracajá Pires | Desenvolvedor Front-end |
 
 ## 📅 Cronograma
@@ -60,17 +71,20 @@ motoCidade/
 - HTML5
 - CSS3
 - Bootstrap 5
+- JavaScript (DOM + fetch API)
+- JSON (dados das motos)
 - Git e GitHub
 
 ## 💡 Requisitos Atendidos
 
-- [x] Layout responsivo
-- [x] Navegação com múltiplas páginas
-- [x] Identidade visual com logomarca
-- [x] Uso de formulários
-- [x] Organização de arquivos e pastas
-- [x] Documentação no GitHub
+- [x] Layout responsivo e visual limpo
+- [x] Múltiplas páginas com navegação integrada
+- [x] Exibição dinâmica de dados via JSON
+- [x] Formulários com validação e feedback ao usuário
+- [x] Identidade visual personalizada com logomarca
+- [x] Estrutura modular com reaproveitamento de código
+- [x] Documentação clara e organizada no GitHub
 
 ## 🧾 Observações
 
-O sistema é estático e não requer autenticação nem banco de dados. É totalmente funcional no modo local, bastando abrir o `index.html` em qualquer navegador moderno.
+O sistema é 100% estático, mas simula funcionalidades de uma aplicação real. Os dados das motos são carregados dinamicamente de um arquivo `motos.json`, como se fossem fornecidos por uma API de um sistema interno da empresa. Ideal para prototipagem e apresentação em sala de aula.
