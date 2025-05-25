@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estoque - Moto Cidade</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="container my-5">
-    <h1 class="mb-4">Lista de Motos Disponíveis</h1>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <img src="img/xre300.png" class="img-fluid" alt="Honda XRE 300">
-                <div class="card-body">
-                    <h5 class="card-title">Honda XRE 300</h5>
-                    <p class="card-text">Ano 2022 - R$ 18.900,00</p>
-                    <a href="agendamento.html?moto=xre300" class="btn btn-outline-primary">Ver detalhes</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <img src="img/fazer250.png" class="card-img-top" alt="Yamaha Fazer 250">
-                <div class="card-body">
-                    <h5 class="card-title">Yamaha Fazer 250</h5>
-                    <p class="card-text">Ano 2021 - R$ 17.500,00</p>
-                    <a href="agendamento.html?moto=fazer250" class="btn btn-outline-primary">Ver detalhes</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <img src="img/cg160.png" class="card-img-top" alt="Honda CG 160">
-                <div class="card-body">
-                    <h5 class="card-title">Honda CG 160</h5>
-                    <p class="card-text">Ano 2020 - R$ 14.800,00</p>
-                    <a href="agendamento.html?moto=cg160" class="btn btn-outline-primary">Ver detalhes</a>
-                </div>
-            </div>
+    <div id="menu-superior"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('menu-superior').innerHTML = html;
+            });
+    </script>
+    <p>
+    
+    </p>
+    <div class="container my-5">
+        <h1 class="mb-4">Lista de Motos Disponíveis</h1>
+        <div class="row" id="lista-motos">
+            <!-- Cards inseridos via JavaScript -->
         </div>
     </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        fetch('motos.json')
+            .then(res => res.json())
+            .then(motos => {
+                const container = document.getElementById('lista-motos');
+                Object.entries(motos).forEach(([id, moto]) => {
+                    const card = document.createElement('div');
+                    card.className = 'col-md-4 mb-4';
+                    card.innerHTML = `
+        <div class="card">
+          <img src="${moto.imagem}" class="card-img-top" alt="${moto.nome}">
+          <div class="card-body">
+            <h5 class="card-title">${moto.nome}</h5>
+            <p class="card-text">${moto.ano} - ${moto.preco}</p>
+            <a href="agendamento.html?moto=${id}" class="btn btn-outline-primary">Ver detalhes</a>
+          </div>
+        </div>
+      `;
+                    container.appendChild(card);
+                });
+            });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
