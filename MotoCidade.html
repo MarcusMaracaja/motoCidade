@@ -36,15 +36,16 @@
 <body>
 
     <!-- Barra de navegação (menu) -->
-    <div id="menu-superior"></div>
+   <div id="menu-superior"></div>
 
-    <script>
-        fetch('navbar.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('menu-superior').innerHTML = html;
-            });
-    </script>
+<script>
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('menu-superior').innerHTML = html;
+    });
+</script>
+
 
     <!-- Seção principal com título e descrição -->
     <section id="home" class="hero text-center">
@@ -71,6 +72,15 @@
         <p>A Moto Cidade é uma concessionária focada na venda de <strong>motos usadas</strong>. Atuamos no mercado com
             transparência, preços justos e uma seleção de veículos revisados, prontos para rodar com segurança e
             desempenho.</p>
+    </section>
+
+    <section class="container my-5">
+        <h2>Nossos Endereços</h2>
+        <ul>
+            <li><strong>João Pessoa - Centro:</strong> Av. Getúlio Vargas, 123</li>
+            <li><strong>João Pessoa - Bancários:</strong> Rua Universitária, 456</li>
+            <li><strong>Campina Grande - Centro:</strong> Av. Floriano Peixoto, 789</li>
+        </ul>
     </section>
 
     <!-- Seção "Estoque" com cards de motos -->
@@ -135,6 +145,7 @@
             <img src="${moto.imagem}" class="card-img-top" alt="${moto.nome}">
             <div class="card-body">
               <h5 class="card-title">${moto.nome}</h5>
+              <p class="text-danger fw-bold">${moto.loja}</p>
               <p class="card-text">${moto.ano} - ${moto.preco}</p>
               <a href="agendamento.html?moto=${id}" class="btn btn-outline-primary">Ver detalhes</a>
             </div>

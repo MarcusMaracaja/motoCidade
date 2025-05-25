@@ -1,79 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento de Test Drive - Moto Cidade</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento de Test Drive - Moto Cidade</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 90px; 
+    }
+  </style>
 </head>
-
 <body>
-    <div id="menu-superior"></div>
+  <!-- Navbar carregada dinamicamente -->
+  <div id="menu-superior"></div>
 
-    <script>
-        fetch('navbar.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('menu-superior').innerHTML = html;
-            });
-    </script>
-       
-    <div class="container my-5">
-        <h1 class="mb-4">Detalhes da Moto e Agendamento</h1>
-        <div class="row mb-4">
-            <div class="col-md-6">
-                <img id="imgMoto" src="" class="img-fluid" alt="Imagem da Moto">
-            </div>
-            <div class="col-md-6">
-                <h2 id="nomeMoto"></h2>
-                <p><strong>Ano:</strong> <span id="anoMoto"></span></p>
-                <p><strong>Preço:</strong> <span id="precoMoto"></span></p>
-                <p><strong>Descrição Técnica:</strong> <span id="descricaoMoto"></span></p>
-            </div>
-        </div>
-        <h2>Agende um Test Drive</h2>
-        <form>
-            <div class="mb-3">
-                <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="telefone" class="form-label">Telefone</label>
-                <input type="text" class="form-control" id="telefone" required>
-            </div>
-            <div class="mb-3">
-                <label for="data" class="form-label">Data desejada</label>
-                <input type="date" class="form-control" id="data" required>
-            </div>
-            <button type="submit" class="btn btn-success">Enviar Agendamento</button>
-        </form>
+  <div class="container my-5">
+    <h1 class="mb-4">Detalhes da Moto e Agendamento</h1>
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <img id="imgMoto" src="" class="img-fluid" alt="Imagem da Moto">
+      </div>
+      <div class="col-md-6">
+        <h2 id="nomeMoto"></h2>
+        <p><strong>Ano:</strong> <span id="anoMoto"></span></p>
+        <p><strong>Preço:</strong> <span id="precoMoto"></span></p>
+        <p><strong>Descrição Técnica:</strong> <span id="descricaoMoto"></span></p>
+      </div>
     </div>
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const motoID = params.get('moto');
+    <h2>Agende um Test Drive</h2>
+    <form id="formAgendamento">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input type="text" class="form-control" id="telefone" required>
+      </div>
+      <div class="mb-3">
+        <label for="data" class="form-label">Data desejada</label>
+        <input type="date" class="form-control" id="data" required>
+      </div>
+      <button type="submit" class="btn btn-success">Enviar Agendamento</button>
+    </form>
+  </div>
 
-        fetch('motos.json')
-            .then(res => res.json())
-            .then(motos => {
-                const moto = motos[motoID];
-                if (!moto) return;
+  <script>
+    // Carrega navbar externa
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('menu-superior').innerHTML = html);
 
-                document.getElementById('imgMoto').src = moto.imagem;
-                document.getElementById('imgMoto').alt = moto.nome;
-                document.getElementById('nomeMoto').textContent = moto.nome;
-                document.getElementById('anoMoto').textContent = moto.ano;
-                document.getElementById('precoMoto').textContent = moto.preco;
-                document.getElementById('descricaoMoto').textContent = moto.descricao;
-            });
-    </script>
+    // Preenche dados da moto
+    const params = new URLSearchParams(window.location.search);
+    const motoID = params.get('moto');
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    fetch('motos.json')
+      .then(res => res.json())
+      .then(motos => {
+        const moto = motos[motoID];
+        if (!moto) return;
+
+        document.getElementById('imgMoto').src = moto.imagem;
+        document.getElementById('imgMoto').alt = moto.nome;
+        document.getElementById('nomeMoto').textContent = moto.nome;
+        document.getElementById('anoMoto').textContent = moto.ano;
+        document.getElementById('precoMoto').textContent = moto.preco;
+        document.getElementById('descricaoMoto').textContent = moto.descricao;
+      });
+
+    // Formulário com confirmação
+    document.getElementById('formAgendamento').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Agendamento realizado com sucesso! Você receberá um e-mail de confirmação.');
+      window.location.href = 'MotoCidade.html';
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

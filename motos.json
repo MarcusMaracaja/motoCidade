@@ -4,97 +4,111 @@
     "ano": "2022",
     "preco": "R$ 18.900,00",
     "imagem": "img/xre300.png",
-    "descricao": "Motor 300cc, freios ABS, partida elétrica, painel digital."
+    "descricao": "Motor 300cc, freios ABS, partida elétrica, painel digital.",
+    "loja": "João Pessoa - Centro"
   },
   "fazer250": {
     "nome": "Yamaha Fazer 250",
     "ano": "2021",
     "preco": "R$ 17.500,00",
     "imagem": "img/fazer250.png",
-    "descricao": "Motor 250cc, freio a disco nas duas rodas, tanque 19L, injeção eletrônica."
+    "descricao": "Motor 250cc, freio a disco nas duas rodas, tanque 19L, injeção eletrônica.",
+    "loja": "João Pessoa - Centro"
   },
   "cg160": {
     "nome": "Honda CG 160",
     "ano": "2020",
     "preco": "R$ 14.800,00",
     "imagem": "img/cg160.png",
-    "descricao": "Motor 160cc, partida elétrica, freios CBS, excelente custo-benefício."
+    "descricao": "Motor 160cc, partida elétrica, freios CBS, excelente custo-benefício.",
+    "loja": "João Pessoa - Centro"
   },
   "moto4": {
     "nome": "Yamaha Factor 150",
     "ano": "2016",
     "preco": "R$ 10000,00",
     "imagem": "img/factor150.png",
-    "descricao": "Modelo de fábrica com motor 160cc, freio a disco dianteiro, ótimo desempenho urbano."
+    "descricao": "Modelo de fábrica com motor 160cc, freio a disco dianteiro, ótimo desempenho urbano.",
+    "loja": "Campina Grande - Centro"
   },
   "moto5": {
     "nome": "Suzuki Intruder 125",
     "ano": "2016",
     "preco": "R$ 9000,00",
     "imagem": "img/intruder125.png",
-    "descricao": "Modelo chooper com motor 125cc, freio a disco disanteiro, super econômica."
+    "descricao": "Modelo chooper com motor 125cc, freio a disco disanteiro, super econômica.",
+    "loja": "Campina Grande - Centro"
   },
   "moto6": {
     "nome": "suzuki yes 125",
     "ano": "2016",
     "preco": "R$ 8000,00",
     "imagem": "img/yes125.png",
-    "descricao": "Modelo urbanod com motor 124cc, indicador de marcha, único dono."
+    "descricao": "Modelo urbano com motor 124cc, indicador de marcha, único dono.",
+    "loja": "Campina Grande - Centro"
   },
   "moto7": {
     "nome": "yamaha Tenere 250",
     "ano": "2018",
     "preco": "R$ 21000,00",
     "imagem": "img/tenere250.png",
-    "descricao": "Moto alta 250cc, freios a disco, ótimo desempenho urbano. Todo terreno!"
+    "descricao": "Moto alta 250cc, freios a disco, ótimo desempenho urbano. Todo terreno!",
+    "loja": "Campina Grande - Centro"
   },
   "moto8": {
     "nome": "Dafra Horizon 150",
     "ano": "2008",
     "preco": "R$ 6000,00",
     "imagem": "img/horizon150.png",
-    "descricao": "Estiloza e econômica, uma moto completa, com freio a disco e painel completo."
+    "descricao": "Estiloza e econômica, uma moto completa, com freio a disco e painel completo.",
+    "loja": "João Pessoa - Centro"
   },
   "moto9": {
     "nome": "Kawasaki ninja 600cc",
     "ano": "2016",
     "preco": "R$ 32000,00",
     "imagem": "img/ninja.png",
-    "descricao": "Modelo esportivo com motor 600cc, freios a disco, arrojada a mais rápida da categoria."
+    "descricao": "Modelo esportivo com motor 600cc, freios a disco, arrojada a mais rápida da categoria.",
+    "loja": "Campina Grande - Centro"
   },
   "moto10": {
     "nome": "Suzuki Hayabusa 1340cc",
     "ano": "2024",
     "preco": "R$ 125500,00",
     "imagem": "img/Hayabusa1350.png",
-    "descricao": "Famosa pela sua força, agilidade e presença majestosa, a nova Hayabusa de 1.340CC vai tirar o fôlego dos pilotos mais exigentes novamente. Como seu homônimo, o falcão-peregrino japonês, ela domina o seu território como o predador mais rápido e ágil da sua."
+    "descricao": "Famosa pela sua força, agilidade e presença majestosa, a nova Hayabusa de 1.340CC vai tirar o fôlego dos pilotos mais exigentes novamente. Como seu homônimo, o falcão-peregrino japonês, ela domina o seu território como o predador mais rápido e ágil da sua.",
+    "loja": "João Pessoa - Centro"
   },
   "moto11": {
     "nome": "Honda Gold Wing 1833",
     "ano": "2025",
     "preco": "R$ 302645,00",
     "imagem": "img/goldwing.png",
-    "descricao": "CILINDRADA. 1.833 cc. TIPO DE MOTOR. 6 cilindros opostos, refrigerado por líquido, 4 tempos, SOHC, 24 válvulas. POTÊNCIA MÁXIMA. 93 kW (126CV) 5.500 rpm."
+    "descricao": "CILINDRADA. 1.833 cc. TIPO DE MOTOR. 6 cilindros opostos, refrigerado por líquido, 4 tempos, SOHC, 24 válvulas. POTÊNCIA MÁXIMA. 93 kW (126CV) 5.500 rpm.",
+    "loja": "João Pessoa - Bancários"
   },  
   "moto12": {
     "nome": "HaoJue JTZ/DK 150",
     "ano": "2018 ",
     "preco": "R$ 6200,00",
     "imagem": "img/jtz150.webp",
-    "descricao": "Moto usada 2018/2019 com 1200 Km. Motos com design, muita durabilidade, desempenho e preços imbatíveis. Parcela em mais vezes no cartão (12X)."
+    "descricao": "Moto usada 2018/2019 com 1200 Km. Motos com design, muita durabilidade, desempenho e preços imbatíveis. Parcela em mais vezes no cartão (12X).",
+    "loja": "João Pessoa - Bancários"
   },
   "moto13": {
     "nome": "Honda Pop 110",
     "ano": "2023",
     "preco": "R$ 10200,00",
     "imagem": "img/pop100.webp",
-    "descricao": "Modelo com design simples com um tanque de 4 litros. O motor de 110cc conta com injeção eletrônica."
+    "descricao": "Modelo com design simples com um tanque de 4 litros. O motor de 110cc conta com injeção eletrônica.",
+    "loja": "João Pessoa - Centro"
   },
   "moto14": {
     "nome": "Honda Bross 160",
     "ano": "2023",
     "preco": "R$ 21500,00",
     "imagem": "img/bross160.webp",
-    "descricao": "Modelo trail motor monocilíndrico flex de 160 cc, com refrigeração a ar, que gera 14,7/14,5 cv de potência e 1,60/1,46 kgfm de torque."
+    "descricao": "Modelo trail motor monocilíndrico flex de 160 cc, com refrigeração a ar, que gera 14,7/14,5 cv de potência e 1,60/1,46 kgfm de torque.",
+    "loja": "João Pessoa - Bancários"
   }
 }
